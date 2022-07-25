@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CursoProgramacion
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
         }
@@ -24,15 +24,10 @@ namespace CursoProgramacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string textoPeso = txtPeso.Text;
-            double peso = Double.Parse(textoPeso);
-
-            string textoAltura = txtAltura.Text;
-            double altura = Double.Parse(textoAltura);
-
-            double imc = altura / (peso * altura);
-
-            MessageBox.Show("El IMC es: " + imc);
+           
+            GestionClientes ventanaGestionClientes = new GestionClientes();
+            //abrimos la ventana al hacer click
+            ventanaGestionClientes.ShowDialog();
     
         }
 
